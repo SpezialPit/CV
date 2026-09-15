@@ -20,3 +20,35 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;ba
 .education-grid{display:grid;grid-template-columns:1.2fr .8fr;border:1px solid var(--line)}.education-card{min-height:245px;padding:35px;border-right:1px solid var(--line)}.education-card:last-child{border-right:0}.education-card h3{margin:35px 0 8px;font:600 25px var(--display);letter-spacing:-.04em}.education-card p{color:var(--muted);font-size:12px}.education-card time{display:block;margin-top:28px;color:var(--muted-2);font:500 9px var(--mono)}
 .contact{display:grid;grid-template-columns:50px 1fr auto;gap:25px;align-items:end;padding:125px 0 100px}.contact__number{color:var(--accent);font:500 9px var(--mono)}.contact h2{margin-top:13px;font:600 clamp(3.5rem,8vw,7.5rem)/.85 var(--display);letter-spacing:-.075em}.contact p{max-width:500px;margin-top:20px;color:var(--muted)}.contact__mail{font:500 clamp(1rem,2vw,1.4rem) var(--mono);text-decoration:none;border-bottom:1px solid var(--line-strong);padding-bottom:8px;white-space:nowrap}.contact__mail span{color:var(--accent);margin-left:10px}.contact__links{grid-column:2/4;display:flex;gap:25px;margin-top:45px;padding-top:18px;border-top:1px solid var(--line)}.contact__links a{color:var(--muted);font:500 9px var(--mono);text-decoration:none}.contact__links a:hover{color:var(--accent)}.footer{display:flex;justify-content:space-between;padding:22px 0 30px;color:var(--muted-2);font:500 8px var(--mono);letter-spacing:.1em;border-top:1px solid var(--line)}
 @keyframes blink{50%{opacity:0}} @media(max-width:900px){.site-shell{padding:0 20px}.site-header{grid-template-columns:1fr auto}.brand__name{display:none}.main-nav{position:absolute;top:73px;left:0;right:0;display:flex;justify-content:space-between;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--bg);overflow:auto}.main-nav a{white-space:nowrap}.hero__grid{grid-template-columns:1fr;gap:20px}.hero__visual{display:none}.hero__grid{padding-top:90px}.hero__bottom{grid-template-columns:1fr 1fr}.hero__bottom a{display:none}.profile-layout,.experience-main{grid-template-columns:1fr;gap:35px}.experience-item{grid-template-columns:1fr;gap:20px}.skills-grid{grid-template-columns:repeat(2,1fr)}.education-grid{grid-template-columns:1fr}.education-card{border-right:0;border-bottom:1px solid var(--line)}.education-card:last-child{border-bottom:0}.contact{grid-template-columns:30px 1fr}.contact__mail{grid-column:2;margin-top:25px}.contact__links{grid-column:2}.footer{gap:20px;flex-direction:column}} @media(max-width:560px){.site-header{top:10px;margin-top:10px}.controls{gap:4px}.hero{min-height:auto}.hero h1{font-size:clamp(3.7rem,17vw,5.5rem)}.hero__grid{padding:90px 0 50px}.section{padding:85px 0}.section__head{margin-bottom:42px}.skills-grid{grid-template-columns:1fr}.skill-card{min-height:150px}.skill-card h3{margin-top:35px}.contact{padding:90px 0}.contact h2{font-size:clamp(3rem,16vw,5rem)}.contact__links{flex-wrap:wrap;gap:15px}.footer{padding-bottom:25px}}
+
+
+/* Social links */
+.social-link { display: inline-flex; align-items: center; gap: .55rem; }
+.social-link svg { width: 1.05rem; height: 1.05rem; fill: currentColor; flex: 0 0 auto; }
+.social-link:hover svg { transform: translateY(-1px); }
+
+/* High-visibility actions */
+.button--cv{position:relative;min-width:205px;padding:10px 13px;background:var(--accent);color:#06110c;border-color:var(--accent);gap:12px;box-shadow:0 0 0 1px rgba(125,246,202,.12),0 12px 35px var(--glow)}
+.button--cv:hover{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:none}
+.button--cv .button__icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid currentColor;border-radius:6px;font-size:18px}
+.button--cv span:not(.button__icon){display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.button--cv small{font:600 7px var(--mono);letter-spacing:.12em;opacity:.7}
+.button--cv strong{font:600 11px var(--mono);letter-spacing:.02em}
+.button--cv b{margin-left:auto;font-size:15px;font-weight:500}
+
+.contact__links{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:45px;padding-top:18px;border-top:1px solid var(--line)}
+.contact-link{min-height:88px;padding:17px 20px;border:1px solid var(--line);border-left:0;display:flex!important;align-items:center;gap:13px;color:var(--ink)!important;text-decoration:none!important;transition:.25s;background:transparent}
+.contact-link:first-child{border-left:1px solid var(--line)}
+.contact-link:hover{background:var(--surface);border-color:var(--line-strong);transform:translateY(-3px)}
+.contact-link svg{width:24px!important;height:24px!important;flex:0 0 24px;fill:currentColor}
+.contact-link__icon{display:grid;place-items:center;width:24px;height:24px;border:1px solid var(--muted-2);border-radius:5px;font:500 13px var(--mono);flex:0 0 24px}
+.contact-link span:not(.contact-link__icon){display:flex;flex-direction:column;gap:4px;min-width:0}
+.contact-link small{color:var(--muted-2);font:500 7px var(--mono);letter-spacing:.12em}
+.contact-link strong{font:500 11px var(--mono);white-space:nowrap}
+.contact-link b{margin-left:auto;color:var(--accent);font:500 12px var(--mono)}
+.contact-link--cv{background:var(--accent);color:#06110c!important;border-color:var(--accent);box-shadow:0 10px 35px var(--glow)}
+.contact-link--cv small,.contact-link--cv b{color:#06110c}
+.contact-link--cv:hover{background:var(--ink);color:var(--bg)!important;border-color:var(--ink)}
+.contact-link--cv:hover small,.contact-link--cv:hover b{color:var(--accent)}
+@media(max-width:900px){.contact__links{grid-template-columns:repeat(2,1fr)}.contact-link{border-left:1px solid var(--line);border-top:0}.contact-link:nth-child(-n+2){border-top:1px solid var(--line)}}
+@media(max-width:560px){.hero__actions{flex-direction:column;align-items:stretch}.button--cv{justify-content:flex-start;width:100%;box-sizing:border-box}.contact__links{grid-template-columns:1fr}.contact-link,.contact-link:nth-child(-n+2){border-left:1px solid var(--line);border-top:1px solid var(--line)}.contact-link:first-child{border-top:1px solid var(--line)}}
